@@ -1,0 +1,303 @@
+/* This pice of code i took it from the Youtube video of "Create a Dark Mode Switch with HTML, CSS, JavaScript" */
+:root{
+    --base-color: white; /* This is the base color of the page */
+    --base-variant:#e8e9ed; /* This is the variant color of the page */
+    --text-color:#111528; /* This is the text color of the page */
+    --secondary-text:#232738; /* This is the secondary text color of the page */
+    --primary-color:#0071ff; /* This is the primary color of the page */
+}
+
+/* This pice of code i took it from the Youtube video of "Create a Dark Mode Switch with HTML, CSS, JavaScript" */
+.darkmode{ /*  This is the settings for the dark mode  */
+    --base-color:#070b1d; /* This is the base color of the page in dark mode */
+    --base-variant:#101425; /* This is the variant color of the page in dark mode */
+    --text-color:#ffffff; /* This is the text color of the page in dark mode */ 
+    --secondary-text:#a4a5b8; /* This is the secondary text color of the page in dark mode */
+    --primary-color:#0071ff; /* This is the primary color of the page in dark mode */
+}
+
+/* This pice of code i took it from the Youtube video of "Create a Dark Mode Switch with HTML, CSS, JavaScript" */
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    transition: background-color 0.3s, color 0.3s; /* This will make the background color and text color change smoothly */
+    background-color: var(--base-color); /*  I added this line. Hopefuly changes the whole page :)    */
+}
+
+ /* This will make the navbar fixed at the top of the page */
+.navbar {
+    background-color: var(--base-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 5%;
+    border-radius: 1px;
+    border-color: var(--base-color);
+}
+
+/* This is the navbar, where we will put the links to the pages */
+.navbar li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+
+.navbar a {
+    text-decoration: none;
+    color: purple;
+}
+
+
+.banner {
+    background-color: pink; /* This is the background color of the banner. Is where my picture is located :) */
+    color: black;
+    margin-top: 50px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.socials{
+    background-color: lightgray;
+    color: black;
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+#small-cat {
+    height:100px;
+    width: 100px;
+    filter: drop-shadow(1px 1px 1px black);
+    border-radius: 50%;
+}
+
+.cat { /* This is the cat image */
+    color: black;
+    background-color: white;
+}
+
+
+.instagram:hover{ /* This is the instagram link */
+    color: var(--base-color);
+    background-color: var(--accent-color);
+    text-decoration: none;
+}
+
+.linkedln:hover{ /* This is the linkedln link */
+    color: var(--base-color);
+    background-color: var(--accent-color);
+    text-decoration: none;
+}
+
+.github:hover{ /* This is the github link */
+    color: var(--base-color);
+    background-color: var(--accent-color);
+    text-decoration: none;
+}
+
+
+#typed-text { /* This is the text that will be typed out */
+  font-size: 2em;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#cursor { /* This is the cursor that will blink */
+  display: inline-block;
+  font-weight: bold;
+  color: #1d2523;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink { /* This is the animation for the cursor */
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+.about-me { /* This is the section where the "About me" is located */
+    /*padding: 20px 50px; /* This will create space on the left side of the section selected */
+    background-color: pink; /* This is the background color of the banner */
+    color: black;
+    margin-top: 50px;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.projectss{ /*  This is where the "Projects ^ w ^ " is located  */
+    background-color: lightgray; /* This is the background color of the banner */
+    color: black;
+    margin-top: 50px;
+    text-align: center;
+    padding: 50px 0;
+}
+
+#projects { /* He uses #gritter  ^ w ^ */
+    margin-top: 50px;
+    color: purple;
+    font-size: 80px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.list-projects{
+    background-color: pink;
+    color: black;
+    color: black;
+    margin-top: 50px;
+    text-align: center;
+    padding: 50px 0;
+}
+
+#proj ul { /* This is where the guy used (id="greets"). For refference :)  */
+    margin-top: 50px;
+    list-style-type: none;
+}
+
+
+/* This is where we added our avatars :) */
+.avatar {
+    background-image: url('../images/appleCat.png');
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;  /* This will make the image round :) */
+    display: inline-block; /* This will make the image inline-block, so it will be in the same line as the text */
+    vertical-align: middle; /* This will align the image with the text */
+}
+
+
+.bold {
+    font-weight: 900;
+}
+
+a.blue {
+    color:blue;
+}
+
+
+#theme-switch{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-variant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+#theme-switch svg{
+    fill: var(--primary-color);
+
+}
+#theme-switch svg:last-child{
+    display: none;
+}
+
+.darkmode #theme-switch svg:first-child{
+    display: none;
+}
+
+.darkmode #theme-switch svg:last-child{
+    display: block;
+}
+
+.footer{
+    text-align: center;
+    background-color: rgb(166, 245, 166);
+    margin-top: 50px;
+    padding: 20px 0;
+}
+
+#back-to-top{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    border: 50%;
+    border-radius: 50%;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#back-to-top:hover{
+    background-color: #555;
+}
+
+
+
+#openModalBtn{
+    position: center;
+}
+
+/* Modal base style - hidden by default */
+.modal { /* This is the modal background */
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7); /* dark overlay */
+}
+
+/* Modal content box */
+.modal-content { /* This is the content of the modal */
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Close button (the “X”) */
+.close { /* This is the close button for the modal */
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn { /* This is the animation for the modal */
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Form field styles */
+form input, form textarea { /* This is the style for the form fields */
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+form button[type="submit"] { /* This is the style for the submit button */
+  background-color: #000;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
